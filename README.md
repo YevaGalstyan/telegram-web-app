@@ -1,27 +1,48 @@
-# TelegramWebApp
+# Telegram Web App with Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+This is an example project showcasing a Telegram web app built using the Angular framework.
 
-## Development server
+-----
+## Links
+* Official docs: [Telegram Web App](https://core.telegram.org/bots/webapps)
+* Telegram Demo Bot: [Durger King](https://t.me/durgerkingbot)
+* Live Demo Bot: Example Bot
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+-----
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Host Web app in [Vercel](https://vercel.com/) or GitHub pages 
 
-## Build
+To host on GitHub pages:
+1. Create a repository (or fork this one)
+2. On the repository: Settings > Pages:
+   1. Source: Deploy from a branch 
+   2. Branch: master, / (root), Save
+3. Wait a few minutes for the web to be deployed. It will be available at: https://{github-username}.github.io/{repository-name}/{location-inside-repository}.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To host on Vercel:
+1. Create Vercel account
+2. Connect Vercel account to GitHub account
+3. Import repository and deploy
 
-## Running unit tests
+### Configure User button to open web app
+1. Go to [Bot Father](https://t.me/BotFather)
+2. Type ```/mybots```
+3. Select your bot 
+4. ```Bot Settings``` — ```Menu Button``` — ```Custom/Edit menu button URL```
+5. Send a URL to your Web App
+6. Send custom button name if not configured
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Add script to ```index.html``` 
 
-## Running end-to-end tests
+To connect a Web App to the Telegram client, place the script telegram-web-app.js in the <head> tag before any other scripts, using this code ([more info](https://core.telegram.org/bots/webapps#initializing-web-apps)):
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+````
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+````
+Note: Don't forget to download package
+-----
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code for personal or commercial purposes.
